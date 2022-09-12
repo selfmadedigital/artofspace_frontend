@@ -1,0 +1,14 @@
+<div id="logo" *ngIf="data" (click)="showMenu()">
+    <ng-container *ngFor="let category of data?.kategorie?.data ; index as i; let odd=odd;" a (click)="loadProjects(category.attributes.slug)">
+         <div class="logo-line even" [class.left-align] = odd>
+             <a href="{{ category.attributes.slug }}" (click)="loadProjects(category.id)">{{ category.attributes.Nazov }}</a>
+             <span>
+                <a href="{{ category.attributes.slug }}" (click)="loadProjects(category.id)">{{ category.attributes.localizations.data[0].attributes.Nazov }}</a>
+             </span>
+          </div>
+          <div class="logo-line odd" [class.left-align] = odd></div>
+       </ng-container> 
+       <div class="logo-text">
+        <img src="/assets/img/svg/logo-sign.svg" alt="Art Of Space" />
+     </div>
+ </div>

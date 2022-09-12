@@ -1,0 +1,44 @@
+<button class="uk-position-top-center"><fa-icon [icon]="faAngleUp" size="lg"></fa-icon></button>
+<div class="slide" data-anchor="slide1">
+    <div id="detail-content">
+        <div id="detail-content-subview" class="project-detail">
+            <div class="container-fluid">
+                <div class="row row-main">
+                    <div class="col-md-8" id="situation-img">
+                        <img src="https://www.artofspace.eu/admin/{{ data?.projekt?.data.attributes.Situacia.Obrazok?.data[0].attributes.url }}">
+                    </div>
+                    <div class="col-md-4">
+                        <p id="situation-content">{{ data?.projekt?.data.attributes.Situacia.Text }}</p>
+                    </div>
+                </div>
+                <div class="row row-details">
+                    <div class="col-md-5">
+                        <ul class="list-unstyled" id="situation-details">
+                            <li>Miesto : {{ data?.projekt?.data.attributes.Situacia.Miesto }}</li>
+                            <li>Autor : {{ data?.projekt?.data.attributes.Situacia.Autor }}</li>
+                            <li>Spolupráca : {{ data?.projekt?.data.attributes.Situacia.Spolupraca }}</li>
+                            <li>{{ data?.projekt?.data.attributes.Situacia.Info }}</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 id="situation-category">{{ data?.projekt?.data.attributes.Situacia.Typ }}</h2>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 id="situation-name">
+                            <span>{{ data?.projekt?.data.attributes.Situacia.Nazov }}</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="slide">
+    <img class="detail-img" src="https://www.artofspace.eu/admin/{{ data?.projekt?.data?.attributes.Foto.data[0].attributes.url }}" />
+</div>
+<div class="slide">
+    <img class="detail-img" src="https://www.artofspace.eu/admin/{{ data?.projekt?.data?.attributes.Foto.data[1].attributes.url }}" />
+</div>
+<div class="slide" *ngFor="let foto of data?.projekt?.data?.attributes.Foto.data">
+    <img class="detail-img" src="https://www.artofspace.eu/admin/{{ foto.attributes.url }}" />
+</div>

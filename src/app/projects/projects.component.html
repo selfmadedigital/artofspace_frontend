@@ -1,0 +1,32 @@
+<swiper *ngIf="data" [config]="config"
+(swiper)="onSwiper($event)"
+(slideChange)="onSlideChange()">
+    <ng-template swiperSlide *ngFor="let project of data?.projekty?.data">
+      <!-- <a (click)="loadDetail(project.id)">
+        <div class="card">
+           <img class="card-img-top" src="https://www.artofspace.eu/admin/{{ project.attributes.Foto.data[0].attributes.url }}">
+           <div class="card-body">
+              <h4 class="card-title">{{ project.attributes.Nazov }}</h4>
+              <p class="card-text">
+                {{ project.attributes.Status }}<br />
+                {{ project.attributes.Datum }}
+              </p>
+           </div>
+        </div>
+     </a> -->
+     <div class="uk-card uk-card-default text-uppercase" (click)="loadDetail(project.id)">
+        <div class="uk-card-media-top">
+            <img src="https://www.artofspace.eu/admin/{{ project.attributes.Foto.data[0].attributes.url }}" alt="">
+        </div>
+        <div class="uk-card-header pb-0">
+          <h3 class="uk-card-title text-uppercase">{{ project.attributes.Nazov }}</h3>
+        </div>
+        <div class="uk-card-body py-0">
+          <p>{{ project.attributes.Status }}</p>
+      </div>
+      <div class="uk-card-footer pt-0">
+        {{ project.attributes.Datum }}
+      </div>
+    </div>
+    </ng-template>
+  </swiper>

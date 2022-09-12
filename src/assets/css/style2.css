@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap');
+
+body{
+	font-family: 'Barlow', sans-serif;
+}
+
+a, a:visited, a:focus, a:active{
+	color: #A1A1A1;
+}
+
+a:href{
+	color: #000;
+}
+
+#logo{
+	width: 20vw;
+	height: 20vw;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#logo .logo-text h1, #logo .logo-text h2{
+	    text-align: justify;
+    font-size: 3vw;
+}
+
+#logo .logo-text h2{
+	font-size: 1.5vw;
+}
+
+#logo .logo-line{
+	width: 100%;
+	height: 0.5vw;
+	background-color: #000;
+	margin-top:1.2vw;
+}
+
+#logo .logo-line:first-child{
+margin-top: 0;
+	}
+
+.navbar{
+	box-shadow: none;
+}
+
+.navbar img{
+	height: 15px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+	padding: 0.5rem 2rem 0.5rem 0;
+	font-weight: 500;
+}
+
+.owl-stage{
+	padding: 0 !important;
+}
+
+.owl-carousel .owlcarousel-item .card-img-top{
+	border: 1px solid #000;
+    border-left: 0;
+    border-right: 0;
+    height: 40vh;
+    padding: 0 1rem;
+    object-fit: cover;
+}
+
+.card{
+	box-shadow: none;
+}
+
+.card .card-body{
+	padding: 1rem;
+}
+
+.card .card-title{
+    color: #666;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.card .card-text{
+	    font-weight: 400;
+    color: #666;
+    font-size: 1rem;
+}
+
+.project-detail h1{
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+
+.project-detail h2{
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: bolder;
+	text-align: right;
+}
+
+.project-detail p{
+	text-align: justify;
+}
+
